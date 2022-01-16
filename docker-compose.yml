@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  db:
+    image:postgres
+
+  bit68:
+    image: bit68
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
